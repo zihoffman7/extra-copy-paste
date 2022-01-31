@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>CopyPaste</title>
+    <script src="jquery.min.js"></script>
+    <script src="page.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="icon-bar">
+      <div id="icons">
+        <a href="#" id="copy-icon" class="tab active" data-tab="copy-page">
+          <span class="fa fa-copy"></span>
+        </a>
+        <a href="#" id="info-icon" class="tab" data-tab="info-page">
+          <span class="fa fa-lightbulb-o"></span>
+        </a>
+      </div>
+    </div>
+    <div id="copy-page" class="tab-content active-content">
+      <h2 class="header">Selected Slot</h2>
+      <div id="slot-selection-container">
+        <div class="circle-row">
+          <div class="char-circle">1</div>
+          <div class="char-circle">2</div>
+          <div class="char-circle">3</div>
+          <div class="char-circle">4</div>
+        </div>
+        <div class="circle-row">
+          <div class="char-circle">5</div>
+          <div class="char-circle">6</div>
+          <div class="char-circle">7</div>
+          <div class="char-circle">8</div>
+        </div>
+      </div>
+      <pre id="copied-content" hidden></pre>
+      <p id="content-buttons"><span id="show-copied-content">Show Copied Content</span><span id="hide-copied-content">Hide Copied Content</span></p>
+    </div>
+    <div id="info-page" class="tab-content">
+      <h2 class="header">Command List</h2>
+      <div id="command-list">
+        <p><code>Ctrl+Shift+Z</code> Copy into the selected slot</p>
+        <p><code>Ctrl+Shift+V</code> Paste from the selected slot</p>
+        <p><code>Ctrl+Shift+1</code> Switch to slot 1 (shorthand)</p>
+        <p><code>Ctrl+Shift+2</code> Switch to slot 2 (shorthand)</p>
+      </div>
+    </div>
+  </body>
+</html>

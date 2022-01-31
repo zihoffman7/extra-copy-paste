@@ -1,0 +1,52 @@
+{
+  "manifest_version": 2,
+  "name": "CopyPaste Extra",
+  "description": "Additional copy and paste slots",
+  "version": "1.0",
+  "author": "Zachary Hoffman",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "CopyPaste Extra"
+  },
+  "background": {
+    "service_worker": "commands.js",
+    "js" : ["page.js", "jquery.min.js"]
+  },
+  "permissions": [
+    "storage", "activeTab", "<all_urls>"
+  ],
+  "commands": {
+    "copy": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Z",
+        "mac": "Command+Shift+Z"
+      },
+      "description": "Copy into selected slot",
+      "global" : false
+    },
+    "paste": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+V",
+        "mac": "Command+Shift+V"
+      },
+      "description": "Paste from selected slot",
+      "global" : false
+    },
+    "slot_one": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1",
+        "mac": "Command+Shift+1"
+      },
+      "description": "Set slot to slot one",
+      "global" : true
+    },
+    "slot_two": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+2",
+        "mac": "Command+Shift+2"
+      },
+      "description": "Set slot to slot two",
+      "global" : true
+    }
+  }
+}
